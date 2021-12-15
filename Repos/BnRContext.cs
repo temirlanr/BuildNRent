@@ -12,5 +12,6 @@ namespace BuildNRent.Repos
         public BnRContext(DbContextOptions<BnRContext> options) : base(options) { }
         public DbSet<Building> Buildings { get; set; }
         public DbSet<Renter> Renters { get; set; }
+        public DbSet<Interaction> Interactions { get; set; }
     }
 }

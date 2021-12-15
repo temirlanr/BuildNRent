@@ -53,7 +53,7 @@ namespace BuildNRent.Repos
 
         public Renter GetRenterById(int id)
         {
-            return _context.Renters.FirstOrDefault(i => i.Id == id);
+            return _context.Renters.FirstOrDefault(i => i.RenterId == id);
         }
 
         public bool SaveChanges()

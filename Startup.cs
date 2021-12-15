@@ -43,6 +43,7 @@ namespace BuildNRent
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IRenterRepo, RenterRepo>();
             services.AddScoped<IBuildingRepo, BuildingRepo>();
+            services.AddScoped<IInteractionRepo, InteractionRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

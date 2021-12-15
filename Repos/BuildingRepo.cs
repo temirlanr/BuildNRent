@@ -53,7 +53,7 @@ namespace BuildNRent.Repos
 
         public Building GetBuildingById(int id)
         {
-            return _context.Buildings.FirstOrDefault(i => i.Id == id);
+            return _context.Buildings.FirstOrDefault(i => i.BuildingId == id);
         }
 
         public bool SaveChanges()

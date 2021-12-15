@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,17 +10,12 @@ namespace BuildNRent.Models
 {
     public class Building
     {
-        public int Id { get; set; }
+        [Key]
+        public int BuildingId { get; set; }
+        [Required]
         public string BuildingName { get; set; }
-        public decimal Area { get; set; }
+        [Required]
         public bool IsBusiness { get; set; }
-        public decimal SalePrice
-        {
-            get
-            {
-                return Area * 1000;
-            }
-        }
-        public IList BelongsTo { get; set; }
+        public decimal SalePrice { get; set; } = 1000;
     }
 }
